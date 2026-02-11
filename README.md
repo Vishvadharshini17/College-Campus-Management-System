@@ -52,3 +52,7 @@ Automated placement tracking
 Reporting and analytics
 
 Cloud deployment
+
+**Screenshot**:
+<img width="740" height="429" alt="image" src="https://github.com/user-attachments/assets/70b2ef63-aad6-44ea-8326-28e135ac2eec" />
+
