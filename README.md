@@ -1,11 +1,11 @@
-**College Campus Management System**:
+## College Campus Management System:
 
-🔹 **Overview**:
+## Overview:
 
 The College Campus Management System is a Java-based application designed to streamline campus operations such as student management, administrative processes, and placement coordination.
 Developed using Object-Oriented Programming (OOP) principles, the project focuses on modular design, efficient data handling, and maintainable architecture.
 
-🔹 **Key Features**:
+## Key Features:
 
 Manage student records efficiently
 
@@ -17,11 +17,11 @@ Validate inputs for reliable data processing
 
 Structured package design for scalability
 
-🔹 **Tech Stack**:
+## Tech Stack:
 
 Java | OOP | JDBC | SQL/Database | Eclipse
 
-🔹 **Project Structure**:
+## Project Structure:
 
 src/com/placement
 │
@@ -32,7 +32,7 @@ src/com/placement
 └── main        → Application entry point  
 
 
-🔹 **How to Run**:
+## How to Run:
 
 Import the project into Eclipse
 
@@ -41,7 +41,7 @@ Build the project
 Run the main class to start the application
 
 
-🔹 **Future Enhancements**:
+## Future Enhancements:
 
 Role-based login (Admin/Student)
 
@@ -53,6 +53,6 @@ Reporting and analytics
 
 Cloud deployment
 
-
+## Output:
 <img width="740" height="429" alt="image" src="https://github.com/user-attachments/assets/70b2ef63-aad6-44ea-8326-28e135ac2eec" />
 
