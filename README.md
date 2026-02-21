@@ -1,58 +1,199 @@
-## College Campus Management System:
+# College Campus Placement Management System
 
-## Overview:
+A Java-based application developed to automate and streamline campus placement activities by managing Students, Companies, and Job Applications efficiently.
 
-The College Campus Management System is a Java-based application designed to streamline campus operations such as student management, administrative processes, and placement coordination.
-Developed using Object-Oriented Programming (OOP) principles, the project focuses on modular design, efficient data handling, and maintainable architecture.
+This project is built using Core Java, JDBC, and Oracle Database, following a clean layered architecture to ensure maintainability, modularity, and scalability.
 
-## Key Features:
 
-Manage student records efficiently
+## Features:
 
-Support placement-related data management
+Add new students with academic details
 
-Perform CRUD operations
+Add and manage company recruitment details
 
-Validate inputs for reliable data processing
+Apply students to companies
 
-Structured package design for scalability
+Validate student eligibility based on CGPA
+
+Organized layered architecture (Bean → DAO → Service → App)
 
 ## Tech Stack:
 
-Java | OOP | JDBC | SQL/Database | Eclipse
+Backend: Java, JDBC
+
+Database: Oracle SQL
+
+IDE: Eclipse
+
+JDK: Java SE 23
+
+Version Control: Git & GitHub
 
 ## Project Structure:
+```plaintext
 
-src/com/placement
+/ CollegeCampusManagementSystem
 │
-├── bean        → Data models  
-├── dao         → Database interactions  
-├── service     → Business logic  
-├── util        → Helper utilities  
-└── main        → Application entry point  
+├── src
+│
+├── com.placement.app
+│      └── PlacementMain.java
+│
+├── com.placement.bean
+│      ├── Application.java
+│      ├── Company.java
+│      └── Student.java
+│
+├── com.placement.dao
+│      ├── ApplicationDAO.java
+│      ├── CompanyDAO.java
+│      └── StudentDAO.java
+│
+├── com.placement.service
+│      └── PlacementService.java
+│
+├── com.placement.util
+│      ├── ActiveApplicationsExistException.java
+│      ├── DBUtil.java
+│      ├── EligibilityViolationException.java
+│      └── ValidationException.java
+│
+└── Query.txt
+```
+## Architecture:
 
+The application follows a structured layered architecture:
 
-## How to Run:
+### Model (Bean Layer):
 
-Import the project into Eclipse
+Student.java – Represents student details
 
-Build the project
+Company.java – Represents company details
 
-Run the main class to start the application
+Application.java – Represents job application records
 
+### DAO Layer:
 
-## Future Enhancements:
+Handles all database operations using JDBC
 
-Role-based login (Admin/Student)
+Performs insert, update, delete, and fetch operations
 
-Web-based interface
+### Service Layer:
 
-Automated placement tracking
+Contains business logic
 
-Reporting and analytics
+Performs eligibility validation
 
-Cloud deployment
+Manages application constraints
 
-## Output:
+Throws custom exceptions
+
+### App Layer:
+
+PlacementMain.java
+
+Provides menu-driven console interaction
+
+### Utility Layer:
+
+DBUtil.java → Handles database connectivity
+
+Custom exception classes → Manage validation and eligibility errors
+
+## Database Schema:
+Table: STUDENT:
+```plaintext
+| Column Name | Description    |
+| ----------- | -------------- |
+| student_id  | Primary Key    |
+| name        | Student Name   |
+| branch      | Department     |
+| cgpa        | Academic CGPA  |
+| phone       | Contact Number |
+```
+Table: COMPANY:
+```plaintext
+| Column Name | Description    |
+| ----------- | -------------- |
+| student_id  | Primary Key    |
+| name        | Student Name   |
+| branch      | Department     |
+| cgpa        | Academic CGPA  |
+| phone       | Contact Number |
+```
+Table: COMPANY:
+```plaintext
+| Column Name  | Description           |
+| ------------ | --------------------- |
+| company_id   | Primary Key           |
+| company_name | Company Name          |
+| min_cgpa     | Minimum CGPA Required |
+| package      | Salary Package        |
+```
+<img width="1524" height="178" alt="image" src="https://github.com/user-attachments/assets/112b1b60-95ea-4d30-b217-15e08aa74094" />
+
+<img width="1576" height="224" alt="image" src="https://github.com/user-attachments/assets/4b2bdab1-9572-4d77-a21c-18369bea5e2c" />
+
+<img width="884" height="732" alt="image" src="https://github.com/user-attachments/assets/93fbaa37-2c04-483a-8cd0-c5acd9c58663" />
+
+## How to Run the Project:
+
+- Clone the Repository
+git clone https://github.com/your-username/CollegeCampusManagementSystem.git
+- Import into Eclipse
+
+File → Import → Existing Projects into Workspace
+
+Select the project folder
+
+- Setup Database
+
+Create STUDENT table
+
+Create COMPANY table
+
+Create APPLICATION table
+
+Add required constraints and foreign keys
+
+Update database credentials in DBUtil.java
+
+- Add Oracle JDBC Driver
+
+Add ojdbc6.jar (or compatible version) to Referenced Libraries
+
+- Run the Application
+
+Run PlacementMain.java
+
+Use console menu options
+
+## Test Scenarios:
+
+Add student with valid & invalid CGPA
+
+Add company with eligibility criteria
+
+Apply eligible student to company
+
+Prevent application if CGPA is below required minimum
+
+## Exception Handling:
+
+Custom exceptions implemented:
+
+ValidationException
+
+EligibilityViolationException
+
+ActiveApplicationsExistException
+
+These ensure structured error handling and clean business logic separation.
+
+## Output Screenshot:
 <img width="740" height="429" alt="image" src="https://github.com/user-attachments/assets/70b2ef63-aad6-44ea-8326-28e135ac2eec" />
+
+## Student Details:
+
+Name: Vishvadharshini
 
